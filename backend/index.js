@@ -7,5 +7,5 @@ app.get('/',(req,res) => {
 } )
 
 app.listen(PORT,()=>{
-    console.log('Working!')
+    console.log(`Server is live at ${PORT}`)
 })
