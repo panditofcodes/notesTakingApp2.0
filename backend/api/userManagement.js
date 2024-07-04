@@ -30,3 +30,5 @@ const userRegistration = async (res, req) => {
 const updateUserDetails = async (res, req) => {};
 
 const deleteUser = async (res, req) => {};
+
+module.exports = { userRegistration }
