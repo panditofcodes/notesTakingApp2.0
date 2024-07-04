@@ -1,6 +1,7 @@
 const User = require("../models/userSchema");
 
 const userRegistration = async (res, req) => {
+    console.log(req.body);
   const { email, password } = req.body;
 
   if (!email || !password) {

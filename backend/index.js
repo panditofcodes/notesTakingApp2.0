@@ -4,9 +4,10 @@ const routes = require("./routes");
 PORT = 8081;
 
 require("./database");
+app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello from home");
+  res.send(`Hello! Server is live at: ${PORT}`);
 });
 
 app.use(routes);
