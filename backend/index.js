@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 const routes = require("./routes");
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 PORT = 8081;
 
 require("./database");
-app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send(`Hello! Server is live at: ${PORT}`);
