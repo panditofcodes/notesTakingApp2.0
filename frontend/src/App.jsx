@@ -1,9 +1,10 @@
 import "./App.css";
+import Note from "./component/Note";
 
 function App() {
   return (
     <>
-      <h1>Working</h1>
+      <Note/>
     </>
   );
 }
