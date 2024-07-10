@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./component.css";
 import { FaSave, FaEdit } from "react-icons/fa";
-import { MdDeleteForever } from "react-icons/md";
+import { MdDeleteForever, MdClear } from "react-icons/md";
+import ShowTags from "./ShowTags";
 
 function Note() {
+  const [textareaValue, setTextareaValue] = useState("");
+
+  const clearTextarea = () => {
+    setTextareaValue("");
+  };
+
   return (
     <>
       <div id="note">
         <div className="tool-ribbon">
-            <div className="cloud-save"></div>
           <ul>
+            <li>
+              <MdClear onClick={clearTextarea} />
+            </li>
             <li>
               <FaSave />
             </li>
@@ -26,7 +35,10 @@ function Note() {
             name="note"
             id="note"
             placeholder="Write your note here!"
+            value={textareaValue}
+            onChange={(e) => setTextareaValue(e.target.value)}
           ></textarea>
+          <ShowTags />
         </div>
       </div>
     </>
