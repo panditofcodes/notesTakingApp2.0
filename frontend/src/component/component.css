@@ -78,7 +78,6 @@
   background-color: white;
   background: url("cloud-icon.png") no-repeat center center;
   background-size: contain;
-  
 }
 
 @keyframes roll {
@@ -88,4 +87,142 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* CSS for toggle */
+.toggle-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+}
+
+/* CSS for Sign In */
+.signin-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.signin-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signin-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-container label {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.signin-container input[type="email"],
+.signin-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.signin-container button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signin-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* CSS for Sign Up */
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-form label {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.signup-form button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signup-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.signup-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.signup-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
 }

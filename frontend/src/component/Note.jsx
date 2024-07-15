@@ -2,14 +2,17 @@ import React from "react";
 import "./component.css";
 import { FaSave, FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
+import { CiEdit } from "react-icons/ci";
 
 function Note() {
   return (
     <>
       <div id="note">
         <div className="tool-ribbon">
-            <div className="cloud-save"></div>
           <ul>
+          <li>
+          <CiEdit />
+            </li>
             <li>
               <FaSave />
             </li>
