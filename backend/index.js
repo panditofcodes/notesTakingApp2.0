@@ -5,7 +5,7 @@ const routes = require("./routes");
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-PORT = 8081;
+PORT = 8080;
 
 require("./database");
 
