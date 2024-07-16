@@ -16,6 +16,9 @@ function Note() {
       <div id="note">
         <div className="tool-ribbon">
           <ul>
+          <li>
+          <CiEdit />
+            </li>
             <li>
               <MdClear onClick={clearTextarea} />
             </li>
