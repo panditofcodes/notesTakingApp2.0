@@ -59,7 +59,25 @@
   box-sizing: border-box; /* Ensure padding is included in width/height */
   background-color: #f9f9f9; /* Slightly off-white background */
   color: #333; /* Dark text color for better readability */
+  margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.note-title {
+  width: 90%;
+}
+
+.note-title textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  border-bottom: 2px solid gray;
+  margin-left: 5%;
+}
+.note-title textarea:focus {
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
 }
 
 .note-area textarea:focus {
