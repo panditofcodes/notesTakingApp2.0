@@ -1,12 +1,10 @@
 import "./App.css";
-import ToggleSignInSignUp from "./component/ToggleSignInSignUp";
-
-
+import Note from "./component/Note";
 
 function App() {
   return (
     <>
-  <ToggleSignInSignUp/>
+      <Note />
     </>
   );
 }
