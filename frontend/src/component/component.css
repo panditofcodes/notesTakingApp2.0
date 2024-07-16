@@ -3,10 +3,9 @@
 /* CSS for notes */
 #note {
   width: 400px;
-  height: 400px;
+  min-height: 400px;
   background-color: white;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -26,7 +25,7 @@
 .tool-ribbon ul {
   list-style-type: none;
   display: flex; /* Display list items in a row */
-  gap: 10px; /* Add space between list items */
+  gap: 5px; /* Add space between list items */
   margin: 0;
   padding: 0;
 }
@@ -97,6 +96,7 @@
   color: gray;
   background-color: white;
   margin-top: 0px;
+  margin-bottom: 10px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -237,4 +237,30 @@
 
 .signup-form a:hover {
   text-decoration: underline;
+}
+
+/* CSS for show notes */
+.add-note {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-note:hover {
+  background-color: #0056b3;
+}
+
+.notes-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: left;
+  padding: 20px;
 }
