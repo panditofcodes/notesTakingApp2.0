@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./component.css";
 import { FaSave, FaEdit, FaTag } from "react-icons/fa";
 import { MdDeleteForever, MdClear } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import ShowTags from "./ShowTags";
 
-function Note() {
-  const [noteValue, setNoteValue] = useState("");
-  const [titleValue, setTitleValue] = useState("");
-
+function Note({ note, onDelete, onTitleChange, onContentChange }) {
   const clearTextarea = () => {
-    setNoteValue("");
-    setTitleValue("");
+    onTitleChange("");
+    onContentChange("");
   };
 
   return (
@@ -35,7 +32,7 @@ function Note() {
               <FaEdit />
             </li>
             <li>
-              <MdDeleteForever />
+              <MdDeleteForever onClick={onDelete} />
             </li>
           </ul>
         </div>
@@ -44,8 +41,8 @@ function Note() {
             name="note-title"
             id="note-title"
             placeholder="Enter title here"
-            value={titleValue}
-            onChange={(e) => setTitleValue(e.target.value)}
+            value={note.title}
+            onChange={(e) => onTitleChange(e.target.value)}
             required
           ></textarea>
         </div>
@@ -54,10 +51,10 @@ function Note() {
             name="note"
             id="note"
             placeholder="Write your note here!"
-            value={noteValue}
-            onChange={(e) => setNoteValue(e.target.value)}
+            value={note.content}
+            onChange={(e) => onContentChange(e.target.value)}
           ></textarea>
-          <ShowTags />
+          <ShowTags tags={note.tags} />
         </div>
       </div>
     </>

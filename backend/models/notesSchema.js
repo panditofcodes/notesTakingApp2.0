@@ -7,7 +7,11 @@ const notesSchema = new mongo.Schema(
       ref: "USER",
       required: true,
     },
-    note: {
+    title: {
+      type: String,
+      required: true,
+    },
+    content: {
       type: String,
       required: true,
     },

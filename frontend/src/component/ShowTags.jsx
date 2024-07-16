@@ -3,9 +3,7 @@ import "./component.css";
 import { RxCross1 } from "react-icons/rx";
 import AddTag from "./AddTag";
 
-function ShowTags() {
-  const [tags, setTags] = useState(["Tags"]); 
-
+function ShowTags({ tags }) {
   const removeTag = (tagToRemove) => {
     setTags(tags.filter((tag) => tag !== tagToRemove));
   };
