@@ -26,6 +26,11 @@ const notesSchema = new mongo.Schema(
       enum: ["bin", "keep"],
       default: "keep",
     },
+    saveIn:{
+      type: String,
+      enum: ["cloud","local"],
+      default:"local",
+    }
   },
   { timestamps: true }
 );
