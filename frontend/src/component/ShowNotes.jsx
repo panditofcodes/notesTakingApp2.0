@@ -20,6 +20,10 @@ function ShowNotes() {
 
   const [notes, setNotes] = useState(initialNotes);
 
+  const handleSave = () =>{
+
+  }
+
   const addNote = () => {
     const newNote = {
       id: Date.now(),
@@ -61,6 +65,7 @@ function ShowNotes() {
             onContentChange={(newContent) =>
               updateNote(note.id, note.title, newContent)
             }
+            handleSave={handleSave}
           />
         ))}
       </div>

@@ -5,7 +5,7 @@ import { MdDeleteForever, MdClear } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import ShowTags from "./ShowTags";
 
-function Note({ note, onDelete, onTitleChange, onContentChange }) {
+function Note({ note, onDelete, onTitleChange, onContentChange, handleSave }) {
   const clearTextarea = () => {
     onTitleChange("");
     onContentChange("");
@@ -26,7 +26,7 @@ function Note({ note, onDelete, onTitleChange, onContentChange }) {
               <MdClear onClick={clearTextarea} />
             </li>
             <li>
-              <FaSave />
+              <FaSave onClick={handleSave} />
             </li>
             <li>
               <FaEdit />
